@@ -1060,3 +1060,192 @@ img {
   overflow: hidden;
 }
 
+
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 24;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.topbar-icon .material-symbols-outlined{
+  font-size: 16px;
+}
+
+.mail-icon{
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+.stat-icon .material-symbols-outlined,
+.pillar-icon .material-symbols-outlined,
+.commitment-icon .material-symbols-outlined{
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.lab-emoji .material-symbols-outlined{
+  font-size: 22px;
+  color: #1e3a5f;
+}
+
+.check-icon{
+  font-size: 14px;
+  color: #ffffff;
+}
+
+@keyframes floatSoft {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.stat-icon,
+.pillar-icon,
+.commitment-icon,
+.topbar-icon,
+.lab-emoji {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatSoft 3.2s ease-in-out infinite;
+}
+
+.stat-icon:hover,
+.pillar-icon:hover,
+.commitment-icon:hover,
+.topbar-icon:hover,
+.lab-emoji:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.member-card,
+.stat-card,
+.pillar-card,
+.counselor-card,
+.meta-card,
+.commitment-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.member-card:hover,
+.stat-card:hover,
+.pillar-card:hover,
+.counselor-card:hover,
+.meta-card:hover,
+.commitment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(15, 39, 68, 0.14);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.stats,
+.presentation,
+.counselors,
+.objective,
+.pillars,
+.goals,
+.infra,
+.schedule,
+.commitments,
+.footer {
+  animation: fadeUp 0.8s ease both;
+}
+
+.stats { animation-delay: 0.08s; }
+.presentation { animation-delay: 0.14s; }
+.counselors { animation-delay: 0.2s; }
+.objective { animation-delay: 0.26s; }
+.pillars { animation-delay: 0.32s; }
+.goals { animation-delay: 0.38s; }
+.infra { animation-delay: 0.44s; }
+.schedule { animation-delay: 0.5s; }
+.commitments { animation-delay: 0.56s; }
+.footer { animation-delay: 0.62s; }
+
+.meta-toggle,
+.mail-pill,
+.footer-mail,
+.chip {
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meta-toggle:hover,
+.mail-pill:hover,
+.footer-mail:hover,
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(59, 130, 246, 0.18);
+}
+
+.member-card,
+.meta-card,
+.commitment-card,
+.counselor-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.member-card::after,
+.meta-card::after,
+.commitment-card::after,
+.counselor-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.12),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.member-card:hover::after,
+.meta-card:hover::after,
+.commitment-card:hover::after,
+.counselor-card:hover::after {
+  left: 140%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.topbar-icon .material-symbols-outlined,
+.stat-icon .material-symbols-outlined,
+.pillar-icon .material-symbols-outlined,
+.commitment-icon .material-symbols-outlined,
+.lab-emoji .material-symbols-outlined,
+.mail-icon {
+  color: #ffffff !important;
+}
